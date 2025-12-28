@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gatria Imobiliária</title>
-
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
     <script src="https://cdn.tailwindcss.com"></script>
 
     <script>
@@ -44,13 +47,17 @@
   <body class="bg-gray-50 text-gray-800">
     <!-- NAVBAR -->
     <nav
-      class="bg-nav px-2 lg:px-20 py-4 flex lg:flex-row items-center justify-between gap-4"
+      class=" z-40 relative bg-nav px-2 lg:px-20 py-4 flex lg:flex-row items-center justify-between gap-4"
     >
       <img src="logo.png" class="w-40 h-auto rounded-xl" />
 
-      <ul
+      <ul 
+        id="mobileMenu"
         class="hidden md:flex md:flex-col lg:flex lg:flex-row uppercase font-bold text-sm lg:text-base gap-12"
       >
+      <li class="lg:hidden pb-4">
+          <img src="logo.png" class="w-40 h-auto rounded-xl" />
+        </li>
         <li><a class="hover:text-linkNavHover text-linkNav cursor-not-allowed">Home</a></li>
         <li>
           <a href="./frontend/imoveis.html" class="hover:text-linkNavHover text-linkNav"
@@ -65,11 +72,17 @@
             >Contato</a
           >
         </li>
+        
       </ul>
 
       <div class="hidden lg:flex items-center gap-2 text-gold font-bold text-linkNav">
         <i class="fa-solid fa-phone"></i>
         <span>(11) 99999-9999</span>
+      </div>
+      <div>
+        <button id="menu-btn" class=" relative z-50 md:hidden text-white text-2xl cursor-pointer ">
+  <i class="text-linkNav hover:text-linkNavHover fa-solid fa-bars"></i>
+</button>
       </div>
     </nav>
 
@@ -638,5 +651,7 @@
       </div>
       
     </footer>
+    <script src="enginne.js"></script>
   </body>
+
 </html>
