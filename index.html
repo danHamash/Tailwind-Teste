@@ -44,12 +44,12 @@
   <body class="bg-gray-50 text-gray-800">
     <!-- NAVBAR -->
     <nav
-      class="bg-nav px-6 lg:px-20 py-4 flex flex-col lg:flex-row items-center justify-between gap-4"
+      class="bg-nav px-2 lg:px-20 py-4 flex lg:flex-row items-center justify-between gap-4"
     >
       <img src="logo.png" class="w-40 h-auto rounded-xl" />
 
       <ul
-        class="flex flex-col lg:flex-row uppercase font-bold text-sm lg:text-base gap-12"
+        class="hidden md:flex md:flex-col lg:flex lg:flex-row uppercase font-bold text-sm lg:text-base gap-12"
       >
         <li><a class="hover:text-linkNavHover text-linkNav cursor-not-allowed">Home</a></li>
         <li>
@@ -562,10 +562,10 @@
       </section>
     </main>
 
-    <footer class="bg-nav la:px-20 pt-12 pb-4 text-white">
-      <div class="grid grid-cols-2  lg:flex lg:flex-row justify-between px-2 lg:px-20 gap-12">
-        <div class="footer_about">
-        <div class="footer_about_logo">
+    <footer class="bg-nav la:px-20 pt-12 pb-4 text-white text-center lg:text-start">
+      <div class="flex flex-col lg:flex-row justify-between px-2 lg:px-20 gap-2 lg:gap-12">
+        <div>
+        <div >
           <img src="logo.png" alt="logo da empresa" class="w-40 mb-4" />
         </div>
         <div>
@@ -575,13 +575,12 @@
           </p>
         </div>
         <hr class="mt-2 border border-muted">
-        <div class="flex gap-4 mt-4 text-xl">
-          <a href="https://www.facebook.com/seu-perfil" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://www.instagram.com/seu-perfil" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.tiktok.com/@seu-perfil" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i></a>
+        <div class="flex justify-evenly mt-4 mb-4 lg:block text-xl">
+          <a class="hover:text-linkNavHover"  href="https://www.facebook.com/seu-perfil" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+          <a class="lg:mx-4 hover:text-linkNavHover" href="https://www.instagram.com/seu-perfil" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+          <a class="hover:text-linkNavHover" href="https://www.tiktok.com/@seu-perfil" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i></a>
         </div>
       </div>
-
       <div>
         <div>
           <h2 class="font-bold  lg:text-lg pb-4  text-linkNav ">Links Rápidos</h2>
@@ -611,7 +610,7 @@
 
       <div>
         <div>
-          <h2 Contato class="font-bold  lg:text-lg pb-4  text-linkNav ">Contato</h2>
+          <h2 class="font-bold  lg:text-lg pb-4  text-linkNav ">Contato</h2>
         </div>
         <div>
           <ul>
@@ -627,7 +626,7 @@
 
         <hr class="mt-4 border border-muted">
 
-      <div class="flex flex-col lg:flex-row justify-between pt-4 px-20">
+      <div class="flex flex-col lg:flex-row justify-between pt-4  px-2 lg:px-20">
         <div>
           <span>© 2024 Gatria. Todos os direitos reservados. CRECI 12345-J</span>
         </div>
