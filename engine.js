@@ -11,7 +11,7 @@
     menu.classList.add("bg-nav")
     menu.classList.add("absolute");
     menu.classList.add("top-0");
-    menu.classList.add("right-2");
+    menu.classList.add("right-4");
     menu.classList.add("h-[50vh]");
     menu.classList.add("w-full");
     menu.classList.add("gap-4");
