@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato Gatria</title>
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./personal.js"></script>
+</head>
+<body>
+    <nav
+      class=" z-40 relative bg-nav px-2 lg:px-20 py-4 flex lg:flex-row items-center justify-between gap-4"
+    >
+      <img src="logo.png" class="w-40 h-auto rounded-xl" />
+
+      <ul 
+        id="mobileMenu"
+        class="hidden md:flex md:flex-col lg:flex lg:flex-row uppercase font-bold text-sm lg:text-base gap-12"
+      >
+      <li class="lg:hidden pb-4">
+          <img src="logo.png" class="w-40 h-auto rounded-xl" />
+        </li>
+        <li><a href="./index.html" class="hover:text-linkNavHover text-linkNav cursor-pointer">Home</a></li>
+        <li>
+          <a href="./frontend/imoveis.html" class="hover:text-linkNavHover text-linkNav"
+            >Imóveis</a
+          >
+        </li>
+        <li>
+          <a href="./frontend/sobre.html" class="hover:text-linkNavHover text-linkNav">Sobre</a>
+        </li>
+        <li>
+          <a href="./frontend/contato.html" class="hover:text-linkNavHover text-linkNav cursor-not-allowed""
+            >Contato</a
+          >
+        </li>
+        
+      </ul>
+      <div>
+        <button id="menu-btn" class=" relative z-50 md:hidden text-white text-2xl cursor-pointer ">
+  <i class="text-linkNav hover:text-linkNavHover fa-solid fa-bars"></i>
+</button>
+      </div>
+
+      <div class="hidden lg:flex items-center gap-2 text-gold font-bold text-linkNav">
+        <i class="fa-solid fa-phone"></i>
+        <span>(11) 99999-9999</span>
+      </div>
+      
+    </nav>
+    <header>
+        <section class="flex flex-col lg:grid lg:grid-cols-2 p-6 lg:p-20 justify-between gap-6">
+        <div>
+          <div>
+            <h2 class="uppercase tracking-widest font-semibold text-sm lg:text-lg">Entre em Contato</h2>
+          </div>
+          <div>
+            <h1 class="text-4xl lg:text-6xl font-bold text-start mt-4">
+              Estamos Aqui Para Ajudar
+            </h1>
+          </div>
+          <div>
+            <p class="text-base lg:text-lg mt-4 text-muted"
+            >
+              Preencha o formulário ou utilize nossos canais de atendimento. Responderemos em até 24 horas.
+            </p>
+          </div>
+          <div class="mt-4 text-start text-base lg:text-lg">
+            <ul class="flex flex-col gap-4">
+              <li><i class="fas fa-phone-alt text-linkNavHover"></i><strong class="text-linkNavHover"> Telefone</strong><br>(11) 99999-9999</li>
+              <li><i class="fas fa-clock text-linkNavHover"></i><strong class="text-linkNavHover"> Horário</strong><br>Seg-Sex: 8h-20h | Sáb: 9h-18h | Dom: 10h-16h</li>
+              <li><i class="fas fa-envelope text-linkNavHover"></i><strong class="text-linkNavHover"> E-mail</strong><br>contato@eliteimoveis.com.br</li>
+              <li><i class="fas fa-map-marker-alt text-linkNavHover"></i><strong class="text-linkNavHover" > Endereço</strong><br>Av. Paulista, 1000 - São Paulo</li>
+            </ul>
+          </div>
+          <div class="m-w-40 mt-4">
+          <iframe class="w-full  rounded-xl" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14744.16203179719!2d-43.170203462500034!3d-22.502663305633416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1766610420092!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        </div>
+
+        <div class="lg:px-6 w-full lg:w-50 lg:mx-auto">
+          <h2 class=" uppercase tracking-widest font-semibold text-sm lg:text-lg">Solicite um contato</h2>
+
+          <form action="https://formspree.io/f/mdandvyy" method="POST" 
+                class="mt-4 flex flex-col lg:w-40 w-full justify-center">
+            
+            <input class="mb-4 p-1 lg:p-2 rounded-md border border-muted" type="text" id="email" name="email" placeholder="E-mail" required />
+            <div class="flex flex-row gap-2">
+              <input class="mb-4 p-1 lg:p-2 rounded-md border border-muted w-full" type="text" id="nome" name="name" placeholder="Nome" required />
+              <input class="mb-4 p-1 lg:p-2 rounded-md border border-muted w-full" type="number" id="sobrenome" name="subname" placeholder="Sobre Nome" />
+
+            </div>
+            
+            <input class="mb-4 p-1 lg:p-2 rounded-md border border-muted" type="number" id="telefone" name="phone" placeholder="Telefone" />
+
+            <textarea class="mb-4 p-1 lg:p-2 rounded-md border border-muted" id="message" name="mensage" placeholder="Mensagem" required></textarea>
+            <br />
+            <div class="flex items-center justify-center">
+              <button class="p-2 lg:p-3 w-40 bg-nav text-linkNav hover:text-linkNavHover rounded-md" type="submit">Enviar</button>
+
+            </div>
+          </form>
+        </div>
+      </section>
+    </header>
+     <footer class="bg-nav la:px-20 pt-12 pb-4 text-white text-center lg:text-start">
+      <div class="flex flex-col lg:flex-row justify-between px-2 lg:px-20 gap-2 lg:gap-12">
+        <div>
+        <div >
+          <img src="logo.png" alt="logo da empresa" class="w-40 mb-4" />
+        </div>
+        <div>
+          <p class="max-w-sm text-sm lg:text-base">
+            Há mais de 20 anos realizando sonhos e conectando pessoas aos
+            imóveis perfeitos. Excelência e confiança em cada negociação.
+          </p>
+        </div>
+        <hr class="mt-2 border border-muted">
+        <div class="flex justify-evenly mt-4 mb-8 lg:mb-4 lg:block text-xl">
+          <a class="hover:text-linkNavHover"  href="https://www.facebook.com/seu-perfil" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+          <a class="lg:mx-4 hover:text-linkNavHover" href="https://www.instagram.com/seu-perfil" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+          <a class="hover:text-linkNavHover" href="https://www.tiktok.com/@seu-perfil" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+      <div class="mb-8 lg:mb-4">
+        <div>
+          <h2 class="font-bold  lg:text-lg pb-4  text-linkNav ">Links Rápidos</h2>
+        </div>
+        <div>
+          <ul>
+            <li><a href="#" class="hover:text-linkNav ">Página Inicial</a></li>
+            <li class="py-1"><a href="./frontend/imoveis.html" class="hover:text-linkNav">Imóveis</a></li>
+            <li><a href="./frontend/sobre.html" class="hover:text-linkNav">Sobre Nós</a></li>
+            <li class="pt-1"><a href="./frontend/contato.html" class="text-linkNavHover cursor-not-allowed">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mb-8 lg:mb-4">
+        <div>
+          <h2 class="font-bold  lg:text-lg pb-4  text-linkNav ">Atendimento</h2>
+        </div>
+        <div>
+          <ul>
+            <li><span class="font-bold  lg:text-md">Sábados</span> <br><span>09:00 às 18:00</span></li>
+            <li class="py-1"><span class="font-bold  lg:text-md">Domingos</span> <br><span>10:00 às 16:00</span></li>
+            <li><span class="font-bold  lg:text-md">Segunda à Sexta</span> <br><span>08:00 às 20:00</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mb-8 lg:mb-4">
+        <div>
+          <h2 class="font-bold  lg:text-lg pb-4  text-linkNav ">Contato</h2>
+        </div>
+        <div>
+          <ul>
+            <li>
+              <span>Av. Paulista, 1000 - Bela Vista <br />São Paulo - SP, 01310-100</span>
+            </li>
+            <li class="py-1"><span>(11) 99999-9999</span></li>
+            <li><span class="break-words text-sm lg:text-base">contato@eliteimoveis.com.br</span></li>
+          </ul>
+        </div>
+      </div>
+      </div>
+
+        <hr class="mt-4 border border-muted">
+
+      <div class="flex flex-col lg:flex-row justify-between pt-4  px-2 lg:px-20">
+        <div class="mb-8 lg:mb-4">
+          <span>© 2024 Gatria. Todos os direitos reservados. CRECI 12345-J</span>
+        </div>
+        <ul class="flex justify-evenly lg:flex-row gap-2 lg:gap-6 text-muted text-sm lg:text-base">
+          <li><a class="hover:text-linkNav" href="#">Cookies</a></li>
+          <li><a class="hover:text-linkNav" href="#">Termos de Uso</a></li>
+          <li><a class="hover:text-linkNav" href="#">Política de Privacidade</a></li>
+        </ul>
+      </div>
+      
+    </footer>
+    <script src="./engine.js"></script>
+</body>
+</html>
