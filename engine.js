@@ -20,3 +20,43 @@
     menu.classList.add("pt-8");
     
   });
+
+  const carousel = document.getElementById("teamCarousel");
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
+  const total = carousel.children.length;
+
+  let index = 0;
+
+  function isMobile() {
+    return window.innerWidth < 1024;
+  }
+
+  function updateCarousel() {
+    carousel.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  function next() {
+    index = (index + 1) % total;
+    updateCarousel();
+  }
+
+  function prev() {
+    index = (index - 1 + total) % total;
+    updateCarousel();
+  }
+
+  nextBtn.addEventListener("click", () => {
+    if (isMobile()) next();
+  });
+
+  prevBtn.addEventListener("click", () => {
+    if (isMobile()) prev();
+  });
+
+  window.addEventListener("resize", () => {
+    if (!isMobile()) {
+      carousel.style.transform = "translateX(0)";
+      index = 0;
+    }
+  });
