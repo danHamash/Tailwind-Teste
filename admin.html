@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gatria admin</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/personal.js"></script>
+</head>
+<body>
+    <nav
+      class=" z-40 relative bg-nav px-2 lg:px-20 py-4 flex lg:flex-row items-center justify-between gap-4"
+    >
+      <img src="../logo.png" class="w-40 h-auto rounded-xl" />
+
+      <ul 
+        id="mobileMenu"
+        class="hidden md:flex md:flex-col lg:flex lg:flex-row uppercase font-bold text-sm lg:text-base gap-12"
+      >
+      <li class="lg:hidden pb-4">
+          <img src="../logo.png" class="w-40 h-auto rounded-xl" />
+        </li>
+   
+      
+      </ul>
+      <div>
+        <button id="menu-btn" class=" relative z-50 mr-4 md:hidden text-white text-2xl cursor-pointer ">
+  <i class="text-linkNav hover:text-linkNavHover fa-solid fa-bars"></i>
+</button>
+      </div>
+      <div>
+        
+        <button class="bg-danger p-2 rounded-xl text-white" id="logout">Sair</button>
+      
+      </div>
+      
+    </nav>
+
+<header class="text-center">
+    <div class="admin_title_container">
+      <h1 class="text-4xl lg:text-3xl font-bold mb-4 lg:text-6xl">Painel Admin</h1>
+    </div>
+        
+       
+  <div>
+    <h2 class="max-w-xl m-auto lg:text-xl text-muted lg:mt-8">Adicionar novos Produtos</h2>
+  </div>
+  <div class="w-full h-auto m-auto px-2 lg:px-80">
+    <form id="produtoForm" class="w-full bg-white shadow rounded-xl p-6 flex flex-col gap-4">
+      <input class=" border rounded-xl p-3" type="text" id="nome" placeholder="Nome" required />
+      <input class=" border rounded-xl p-3" type="number" id="preco" placeholder="Preço" required />
+      <input class=" border rounded-xl p-3" type="text" id="imagem" placeholder="URL da imagem" />
+      <input class=" border rounded-xl p-3" type="text" id="localizacao" placeholder="Localização" />
+      <div class="w-full flex gap-2">
+        <input class="flex-1 border rounded-xl p-3 w-8" type="number" id="banheiro" placeholder="Banheiros">
+        <input class="flex-1 border rounded-xl p-3 w-8" type="number" id="quarto" placeholder="Quartos">
+        <input class="flex-1 border rounded-xl p-3 w-8" type="number" id="vaga" placeholder="Vagas">
+        <input class="flex-1 border rounded-xl p-3 w-8" type="number" id="metro" placeholder="M²">
+      </div>
+    
+    <textarea class="border rounded-xl p-3" id="descricao" placeholder="Descrição"></textarea>
+
+    <div class="flex flex-col lg:flex-row gap-4">
+      <select class="border rounded-lg p-3" id="tipo" required>
+      <option value="">Tipo de residencia</option>
+      <option value="Casa">Casa</option>
+      <option value="Apartamento">Apartamento</option>
+      <option value="Cobertura">Coberturas</option>
+      <option value="Terreno">Terreno</option>
+    </select>
+    <select class="border rounded-lg p-3" id="opcao" required>
+      <option value="">tipo de negocio</option>
+      <option value="Venda">Vender</option>
+      <option value="Alugar">Alugar</option>
+    </select>
+    </div>
+
+    <br>
+
+    <button type="submit" class="hover:bg-nav hover:text-linkNav bg-primary text-white flex m-auto p-2 text-lg rounded-lg ">Adicionar</button>
+  </form>
+
+  </div>
+  
+  <div>
+    <h2 class="uppercase tracking-widest font-semibold text-sm lg:text-lg lg:pt-20 lg:pb-8">Produtos ativos</h2>
+  </div>
+  
+  <ul id="lista"></ul>
+  <div id="sentinela"></div>
+  <button id="carregarMais" class="btn-carregar">
+        Carregar mais
+        </button>
+</header>
+<footer class="bg-nav px-2 lg:px-20 pt-12 pb-4 text-white text-center lg:text-start">
+      <div class="flex flex-col lg:flex-row justify-between gap-2 lg:gap-12">
+        <div>
+        <div >
+          <img src="../logo.png" alt="logo da empresa" class="w-40 mb-4" />
+        </div>
+        <div>
+          <p class="max-w-sm text-sm lg:text-base">
+            Há mais de 20 anos realizando sonhos e conectando pessoas aos
+            imóveis perfeitos. Excelência e confiança em cada negociação.
+          </p>
+        </div>
+        <hr class="mt-2 border border-muted">
+        <div class="flex justify-evenly mt-4 mb-8 lg:mb-4 lg:block text-xl">
+          <a class="hover:text-linkNavHover"  href="https://www.facebook.com/seu-perfil" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+          <a class="lg:mx-4 hover:text-linkNavHover" href="https://www.instagram.com/seu-perfil" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+          <a class="hover:text-linkNavHover" href="https://www.tiktok.com/@seu-perfil" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+      <div class="mb-8 lg:mb-4">
+        <div>
+          <h2 class="font-bold  lg:text-lg pb-4  text-linkNav ">Links Rápidos</h2>
+        </div>
+        <div>
+          <ul>
+            <li><a href="#" class="hover:text-linkNav">Página Inicial</a></li>
+            <li class="py-1"><a href="./frontend/imoveis.html" class="hover:text-linkNav">Imóveis</a></li>
+            <li><a href="./frontend/sobre.html" class="hover:text-linkNav">Sobre Nós</a></li>
+            <li class="pt-1"><a href="./frontend/contato.html" class="hover:text-linkNav">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mb-8 lg:mb-4">
+        <div>
+          <h2 class="font-bold  lg:text-lg pb-4  text-linkNav ">Atendimento</h2>
+        </div>
+        <div>
+          <ul>
+            <li><span class="font-bold  lg:text-md">Sábados</span> <br><span>09:00 às 18:00</span></li>
+            <li class="py-1"><span class="font-bold  lg:text-md">Domingos</span> <br><span>10:00 às 16:00</span></li>
+            <li><span class="font-bold  lg:text-md">Segunda à Sexta</span> <br><span>08:00 às 20:00</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mb-8 lg:mb-4">
+        <div>
+          <h2 class="font-bold  lg:text-lg pb-4  text-linkNav ">Contato</h2>
+        </div>
+        <div>
+          <ul>
+            <li>
+              <span>Av. Paulista, 1000 - Bela Vista <br />São Paulo - SP, 01310-100</span>
+            </li>
+            <li class="py-1"><span>(11) 99999-9999</span></li>
+            <li><span class="break-words text-sm lg:text-base">contato@Gatria_imoveis.com.br</span></li>
+          </ul>
+        </div>
+      </div>
+      </div>
+
+        <hr class="mt-4 border border-muted">
+
+      <div class="flex flex-col lg:flex-row justify-between pt-4  px-2 lg:px-20">
+        <div class="mb-8 lg:mb-4">
+          <span>© 2024 Gatria. Todos os direitos reservados. CRECI 12345-J</span>
+        </div>
+        <ul class="flex justify-evenly lg:flex-row gap-2 lg:gap-6 text-muted text-sm lg:text-base">
+          <li><a class="hover:text-linkNav" href="#">Cookies</a></li>
+          <li><a class="hover:text-linkNav" href="#">Termos de Uso</a></li>
+          <li><a class="hover:text-linkNav" href="#">Política de Privacidade</a></li>
+        </ul>
+      </div>
+      
+</footer>
+  
+
+  <script src="/engine.js"></script>
+  <script src="/admin.js"></script>
+</body>
+</html>
